@@ -15,6 +15,13 @@ func NewProducts(
 
 func (p *Products) ServeHTTP(rw http.ResponseWriter, r *http.Request) {
 	// Handle the request
+	if r.Method == http.MethodGet {
+		p.getProducts(rw, r)
+		return
+	}
+
+	// Generic case.
+	rw.WriteHeader(http.StatusMethodNotAllowed)
 }
 
 func (p *Products) getProducts(rw http.ResponseWriter, r *http.Request) {

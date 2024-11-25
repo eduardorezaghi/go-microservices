@@ -16,10 +16,12 @@ func main() {
 
 	hh := handlers.NewHello(l)
 	gh := handlers.NewGoodbye(l)
+	ph := handlers.NewProducts(l)
 
 	serverMux := http.NewServeMux()
 	serverMux.Handle("/", hh)
 	serverMux.Handle("/goodbye", gh)
+	serverMux.Handle("/products", ph)
 
 	print("Server is running on port 9090\n")
 	// create a new server

@@ -1,10 +1,14 @@
 GET http://localhost:9090 HTTP/1.1
 Content-Type: application/json
 
+nice to meet you!
+
 ###
 
 GET http://localhost:9090/goodbye HTTP/1.1
 Content-Type: application/json
+
+exit!
 
 ###
 

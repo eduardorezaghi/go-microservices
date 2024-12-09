@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	l := log.New(os.Stdout, "product-api", log.LstdFlags)
+	l := log.New(os.Stdout, "product-api\t", log.LstdFlags)
 
 	hh := handlers.NewHello(l)
 	gh := handlers.NewGoodbye(l)
